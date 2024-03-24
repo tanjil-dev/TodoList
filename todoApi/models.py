@@ -8,3 +8,6 @@ class Todo(models.Model):
     is_done = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     user_name = models.OneToOneField(User, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.title
