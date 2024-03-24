@@ -1,7 +1,7 @@
 from django.urls import path
-from . import views
+from . import api_views
 
 urlpatterns = [
-    path('todo-list/', views.todoList, name='list'),
-    path('todo-add/', views.todoList)
+    path('', api_views.todoList, name='list'),
+    # path('todo-add/', views.todoList)
 ]
