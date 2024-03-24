@@ -3,11 +3,11 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from todoApi import views
+from todoApi import api_views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', api_views.UserViewSet)
+router.register(r'groups', api_views.GroupViewSet)
 
 urlpatterns = [
     path('apiV1/todo/', include('todoApi.urls')),
