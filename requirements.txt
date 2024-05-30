@@ -1,8 +1,13 @@
 asgiref==3.4.1
+beautifulsoup4==4.12.3
 Django==3.2.25
+django-bootstrap-v5==1.0.11
 djangorestframework==3.14.0
+importlib-metadata==4.8.3
 psycopg2-binary==2.8.6
 python-dotenv==0.20.0
 pytz==2024.1
+soupsieve==2.3.2.post1
 sqlparse==0.4.4
 typing-extensions==4.1.1
+zipp==3.6.0

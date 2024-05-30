@@ -1,10 +1,10 @@
 from django.urls import path
-from . import api_views
+from . import api_views as view
 
 urlpatterns = [
-    path('', api_views.todoList, name='list'),
-    path('add/', api_views.todoAdd, name='add'),
-    path('<int:pk>/', api_views.todoSingleDetails, name='details'),
-    path('edit/<int:pk>/', api_views.todoEdit, name='edit'),
-    path('remove/<int:pk>/', api_views.todoDelete, name='remove'),
+    path('list/', view.todoList, name='list'),
+    path('add/', view.todoAdd, name='add'),
+    path('<int:pk>/', view.todoSingleDetails, name='details'),
+    path('edit/<int:pk>/', view.todoEdit, name='edit'),
+    path('remove/<int:pk>/', view.todoDelete, name='remove'),
 ]
