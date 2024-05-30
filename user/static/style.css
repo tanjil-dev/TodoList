@@ -1,0 +1,136 @@
+/* #FFA07A */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    letter-spacing: .15rem;
+    overflow: hidden;
+}
+
+body {
+    background: url(https://cdn.wallpapersafari.com/30/0/72Pzwb.jpg);
+}
+
+.container {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-list {
+    width: 100%;
+    background: rgba(235, 164, 224, 0.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.input-list {
+    width: 100%;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 80px 0 10px;
+    outline: none;
+}
+
+.add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.list-box {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    margin-top: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.list-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.list-box::-webkit-scrollbar-track {
+    background: rgba(235, 164, 224, 0.5);
+}
+
+.list-box::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.list {
+    position: relative;
+    height: 40px;
+    width: 93%;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.list:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.list p {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 50px 0 10px;
+}
+
+.icons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.fa-check {
+    margin-right: 15px;
+}
+
+.icons .fa-check:hover {
+    color: turquoise;
+}
+
+.icons .fa-trash:hover {
+    color: red;
+}

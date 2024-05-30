@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+    <div class="todo-list">
+
+        <div class="header">
+            <h1>Todo List</h1>
+            <div class="input-list">
+                <input type="text" class="input" placeholder="Type your task">
+                <button class="add-button">Add</button>
+            </div>
+        </div>
+
+        <div class="list-box">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ forloop.counter }}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}
