@@ -7,7 +7,7 @@ from .serializers import TodoSerializer
 
 @api_view(['GET'])
 def todoList(request):
-    todo = Todo.objects.all()
+    todo = Todo.objects.all().order_by('-id').values()
     serializer = TodoSerializer(todo, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK) 
 
