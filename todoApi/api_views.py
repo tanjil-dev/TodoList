@@ -7,7 +7,7 @@ from .serializers import TodoSerializer
 
 @api_view(['GET'])
 def todoList(request):
-    todo = Todo.objects.all().order_by('-id').values()
+    todo = Todo.objects.all().order_by('-id')
     serializer = TodoSerializer(todo, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK) 
 
@@ -26,7 +26,7 @@ def todoAdd(request):
     else:
         return Response(serializer.errors, status=status.HTTP_403_FORBIDDEN)
     
-@api_view(['PUT'])
+@api_view(['POST'])
 def todoEdit(request, pk):
     todo = Todo.objects.get(id=pk)
     serializer = TodoSerializer(instance=todo, data=request.data)
