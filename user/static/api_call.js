@@ -20,7 +20,7 @@ var list_snapshot = [];
 buildList();
 function buildList() {
     var wrapper = document.getElementById('list-wrapper')
-    var url = 'http://127.0.0.1:8000/apiV1/todo/list/'
+    var url = `${base_url}/apiV1/todo/list/`
 
     fetch(url)
         .then((resp) => resp.json())
@@ -90,10 +90,10 @@ var form = document.getElementById('form-wrapper')
 form.addEventListener('submit', function (e) {
     e.preventDefault()
     console.log('Form Submitted')
-    var url = 'http://127.0.0.1:8000/apiV1/todo/add/'
+    var url = `${base_url}/apiV1/todo/add/`
 
     if (activeItem != null) {
-        var url = `http://127.0.0.1:8000/apiV1/todo/edit/${activeItem.id}/`
+        var url = `${base_url}/apiV1/todo/edit/${activeItem.id}/`
         activeItem = null
     }
 
@@ -120,7 +120,7 @@ function editItem(item) {
 
 function deleteItem(item) {
     console.log('Delete Clicked!', item)
-    fetch(`http://127.0.0.1:8000/apiV1/todo/remove/${item.id}/`, {
+    fetch(`${base_url}/apiV1/todo/remove/${item.id}/`, {
         method: 'DELETE',
         headers: {
             'Content-type': 'application/json',
@@ -134,7 +134,7 @@ function deleteItem(item) {
 function strikeUnstrike(item) {
     console.log('Striked clicked')
     item.is_done = !item.is_done
-    fetch(`http://127.0.0.1:8000/apiV1/todo/edit/${item.id}/`, {
+    fetch(`${base_url}/apiV1/todo/edit/${item.id}/`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
