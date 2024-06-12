@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = 'iz%2$w@2hasl+pg9xek4x8d&b3v%q1=!j!cuxkcb#)4qzc4(=7'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
@@ -103,6 +103,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.environ.get('STATIC_ROOT')
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
