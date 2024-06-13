@@ -25,7 +25,6 @@ function buildList() {
     fetch(url)
         .then((resp) => resp.json())
         .then(function (data) {
-            console.log('Data: ', data)
             var list = data;
             for (var i in list) {
                 try {
@@ -89,7 +88,6 @@ function buildList() {
 var form = document.getElementById('form-wrapper')
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    console.log('Form Submitted')
     var url = `${base_url}/apiV1/todo/add/`
 
     if (activeItem != null) {
@@ -113,13 +111,11 @@ form.addEventListener('submit', function (e) {
 })
 
 function editItem(item) {
-    console.log('Item Clicked!', item)
     activeItem = item
     document.getElementById('title').value = activeItem.title;
 }
 
 function deleteItem(item) {
-    console.log('Delete Clicked!', item)
     fetch(`${base_url}/apiV1/todo/remove/${item.id}/`, {
         method: 'DELETE',
         headers: {
@@ -132,7 +128,6 @@ function deleteItem(item) {
 }
 
 function strikeUnstrike(item) {
-    console.log('Striked clicked')
     item.is_done = !item.is_done
     fetch(`${base_url}/apiV1/todo/edit/${item.id}/`, {
         method: 'POST',
