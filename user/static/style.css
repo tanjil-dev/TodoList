@@ -1,5 +1,46 @@
-body {
-    background: url(https://cdn.wallpapersafari.com/30/0/72Pzwb.jpg);
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        background: url(mobile-size.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body {
+        background: url(mobile-size.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        background: url(tablet-size.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        background: url(tablet-size.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body {
+        background: url(desktop-size.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 h1,
