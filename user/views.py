@@ -1,10 +1,6 @@
 from django.shortcuts import render
-from todoApi.models import Todo 
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     template = 'list.html'
-    # todoList = Todo.objects.all()
-    context = {
-        # 'data': todoList
-    }
-    return render(request, context=context, template_name=template)
+    return render(request, template_name=template)
