@@ -11,3 +11,11 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+
+class Spin(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField(max_length=30)
+    city = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
