@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
 {% block content %}
-
 <div class="container">
     <div class="row d-flex justify-content-center text-center">
         <div class="col-md-6">
@@ -11,7 +9,7 @@
                         <div class="flex-wrapper">
                             <div style="flex: 6">
                                 <input id="title" class="form-control" type="text" name="title"
-                                    placeholder="Type Todo...">
+                                       placeholder="Type Todo...">
                             </div>
                             <div style="flex: 1">
                                 <input id="submit" class="btn btn-md btn-secondary" type="submit" value="Add">
@@ -28,7 +26,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    var base_url = "https://tanjil95.pythonanywhere.com"; //Live url
-    //var base_url = "http://127.0.0.1:8000"; //Prod url
+    //var base_url = "https://tanjil95.pythonanywhere.com"; //Live url
+    var base_url = "http://127.0.0.1:8000"; //Prod url
 </script>
 {% endblock content %}
