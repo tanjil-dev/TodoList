@@ -97,7 +97,7 @@ html,body{
 		}
 		.login_btn {
 			width: 100%;
-			background: #1a75ff !important;
+			background: #005C78 !important;
 			color: white !important;
 		}
 		a.ml-2{
@@ -111,7 +111,7 @@ html,body{
 			padding: 0 2rem;
 		}
 		.input-group-text {
-			background: #f7ba5b !important;
+			background: #006989 !important;
 			color: white !important;
 			border: 0 !important;
 			border-radius: 0.25rem 0 0 0.25rem !important;
