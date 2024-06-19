@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .forms import LoginForm, RegistrationForm
 
-
+@login_required
 def home(request):
     template = 'list.html'
     return render(request, template_name=template)
@@ -10,6 +11,14 @@ def home(request):
 
 def login(request):
     template = 'login.html'
+    form = LoginForm()
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        form.save()
+        redirect('home')
+    context = {
+        'form': form
+    }
     return render(request, template_name=template)
 
 
@@ -19,9 +28,5 @@ def registration(request):
 
 
 def logout(request):
-    login(request)
+    logout(request)
     redirect('login')
-
-def spinthewheel(request):
-    template = 'spinTheWheel.html'
-    return render(request, template_name=template)
