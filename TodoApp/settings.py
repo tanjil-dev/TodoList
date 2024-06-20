@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = "iz%2$w@2hasl+pg9xek4x8d&b3v%q1=!j!cuxkcb#)4qzc4(=7"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -55,14 +55,15 @@ WSGI_APPLICATION = 'TodoApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.environ.get('DEFAULT_DB_NAME'),
-        # 'HOST': os.environ.get('DEFAULT_DB_HOST'),
-        # 'USER': os.environ.get('DEFAULT_DB_USER'),
-        # 'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD'),
-        'NAME': 'tanjil95$todo',
-        'HOST': 'tanjil95.mysql.pythonanywhere-services.com',
-        'USER': 'tanjil95',
-        'PASSWORD': 'Lumia@578'
+        'NAME': os.environ.get('DEFAULT_DB_NAME'),
+        'HOST': os.environ.get('DEFAULT_DB_HOST'),
+        'USER': os.environ.get('DEFAULT_DB_USER'),
+        'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD'),
+        'PORT': os.environ.get('DEFAULT_DB_PORT')
+        # 'NAME': 'tanjil95$todo',
+        # 'HOST': 'tanjil95.mysql.pythonanywhere-services.com',
+        # 'USER': 'tanjil95',
+        # 'PASSWORD': ''
     }
 }
 
