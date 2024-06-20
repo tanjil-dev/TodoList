@@ -2,7 +2,7 @@
 - It's a daily life Todo list.
 - It has both backend & frontend.
 - RestAPI using Django RestFramwork.
-- SQLite Database.
+- Mysql Database.
 - Single page application(SPA)
 - Login and Registration feature
 - HTML, CSS and JavaSCript is being used on frontend.

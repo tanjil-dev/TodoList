@@ -55,10 +55,14 @@ WSGI_APPLICATION = 'TodoApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tanjil95$todo',
-        'HOST': 'tanjil95.mysql.pythonanywhere-services.com',
-        'USER': 'tanjil95',
-        'PASSWORD': 'Lumia@578'
+        'NAME': os.environ.get('DEFAULT_DB_NAME'),
+        'HOST': os.environ.get('DEFAULT_DB_HOST'),
+        'USER': os.environ.get('DEFAULT_DB_USER'),
+        'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD'),
+        # 'NAME': 'tanjil95$',
+        # 'HOST': 'tanjil95.mysql.pythonanywhere-services.com',
+        # 'USER': 'tanjil95',
+        # 'PASSWORD': ''
     }
 }
 
