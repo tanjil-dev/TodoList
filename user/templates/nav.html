@@ -1,41 +1,28 @@
 {% load static %}
-<style>
-    .welcome-msg{
-      font-size: 18px; color:#000; margin-right:20px
-    }
-    .welcome-msg1{
-      font-size: 18px; margin-right:20px
-    }
-  .welcome-msg1:hover{
-  background-color: #3AA6B9;
-  }
-    .welcome-msg1 a{
-  color: #000;
-  }
-    .welcome-msg1 a:hover{
-  color: #fff;
-  }
-</style>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FAE392;>
-  <a class=" navbar-brand" href="{% url 'home' %}"><img src="{% static "logo.png" %}" style="width:40px; height:40px" alt="My image"/></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="href=" {% url 'home' %}">ToDo App <span class="sr-only">(current)</span></a>
-        </li>
-    </ul>
-    <div class="topnav-right">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FAE392;">
+    <a class=" navbar-brand" href="{% url 'home' %}"><img src="{% static 'logo.png' %}" style="width:40px; height:40px"
+        alt="My image"/></a>
+    <button class="navbar-toggler collapsed btn btn-info" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'home' %}">ToDo App <span class="sr-only">(current)</span></a>
+        </div>
         {% if user.is_authenticated %}
-        <span class="welcome-msg">Welcome, {{request.user}}</span>
-        <span class="welcome-msg1 btn btn-outline-primary"><a href="{% url 'logout' %}">Logout</a></span>
+        <div class="navbar-nav ml-auto">
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    {{request.user}}</a>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
         {% endif %}
-
     </div>
-</div>
-</div>
 </nav>

@@ -85,9 +85,6 @@ background: linear-gradient(90deg, rgba(39,53,150,1) 1%, rgba(9,9,121,1) 35%, rg
 			background: #005C78 !important;
 			color: white !important;
 		}
-		a.ml-2{
-		color: white;
-		}
 		.login_btn:focus {
 			box-shadow: none !important;
 			outline: 0px !important;
@@ -112,3 +109,7 @@ background: linear-gradient(90deg, rgba(39,53,150,1) 1%, rgba(9,9,121,1) 35%, rg
 			padding: 10px;
 			margin-top: 10px;
 		}
+
+a.ml-2{
+color: white;
+}
