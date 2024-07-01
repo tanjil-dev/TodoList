@@ -60,10 +60,6 @@ DATABASES = {
         'USER': os.environ.get('DEFAULT_DB_USER'),
         'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD'),
         'PORT': os.environ.get('DEFAULT_DB_PORT')
-        # 'NAME': 'tanjil95$todo',
-        # 'HOST': 'tanjil95.mysql.pythonanywhere-services.com',
-        # 'USER': 'tanjil95',
-        # 'PASSWORD': ''
     }
 }
 
