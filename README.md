@@ -17,43 +17,46 @@ git clone https://github.com/tanjil-dev/TodoList.git
 cd TodoList
 ```
 
-### virtualenv install
+### Virtualenv install
 ```
 pip install virtualenv
 ```
 
-### create virtual environment
+### Create virtual environment
 ```
 python -m venv [name]
 ```
 
-### activate virtual environment(Windows)
+### Activate virtual environment(Windows)
 ```
 .[name]\Scripts\activate.bat
 ```
 
-### activate virtual environment(Linux)
+### Activate virtual environment(Linux)
 ```
 source [name]/bin/activate
 ```
 
-### install all requirements
+### Install all requirements
 ```
 pip install -r requirements.txt
 ```
 
-### migration query into the default database
+### Migration query into the default database
 ```
 python manage.py migrate
 ```
 
-### run server
+### Run server
 ```
 python manage.py runserver
 ```
 
-## Postgres Database Setup
-- Please setup Postgresql RDMS in the local environment. [Tutorial Page](https://join.skype.com/invite/gfDuSdCKc8s9)
+## MySQL Setup
+- Please setup MySQL in the local environment. [Tutorial Page](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+## MySQL with Django Application
+- This step is not applicable for PyMySQL client package user. It's a alternative way of configuring MySQL into the project
+- Please read [this tutorial](https://medium.com/@lebe_93/using-pymysql-to-connect-to-a-django-project-to-a-mysql-database-77bd5dade213) and configure PyMySQL package within the project 
 ## Create .env file using CMD
 - From project root directory go we will enter the TodoApp directory.
 ```
@@ -65,7 +68,6 @@ touch .env
 ```
 - Copy all the variables from the .sample_env file and paste it into the .env file
 - Please put the variable values for database credentials and local directory path etc.
-
 ## Thank you!
 Thank you for checking out this project! If you have any questions, feel free to open an issue or contact me directly. I hope you find this project helpful and look forward to your contributions.
 - **Email:** tanzil.ovi578@gmail.com
