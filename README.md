@@ -1,25 +1,24 @@
 # TodoApp
 - It's a daily life Todo list.
 - It has both backend(Django) & frontend(HTML, CSS & JavaScript).
-- RestAPI using Django RestFramework.
-- Mysql Database.
-- Single page application(SPA)
-- Login and Registration feature
-- HTML, CSS and JavaSCript is being used on frontend.
-- Future implementation will be added for iPhone mobile application view using Swift and android application using java.
+- Single page application(SPA).
+- Login and Registration feature.
+- Future implementation:
+  - Frontend version of iOS & Android platform. 
 - Live project deployed on PythonAnywhere.
-- URL: https://tanjil95.pythonanywhere.com/
+  - URL: https://tanjil95.pythonanywhere.com/
 
 ## Project Setup
-### Clone the repository & enter inside the project directory
+### Clone the repository
 ```
 git clone https://github.com/tanjil-dev/TodoList.git
 ```
+### Locate into the Project directory
 ```
 cd TodoList
 ```
 
-### Virtualenv install
+### Install virtualenv
 ```
 pip install virtualenv
 ```
