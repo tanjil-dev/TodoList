@@ -14,6 +14,8 @@
 ### Clone the repository & enter inside the project directory
 ```
 git clone https://github.com/tanjil-dev/TodoList.git
+```
+```
 cd TodoList
 ```
 
@@ -32,7 +34,7 @@ python -m venv [name]
 .[name]\Scripts\activate.bat
 ```
 
-### Activate virtual environment(Linux)
+### Activate virtual environment(Linux & macOS)
 ```
 source [name]/bin/activate
 ```
@@ -53,9 +55,9 @@ python manage.py runserver
 ```
 
 ## MySQL Setup
-- Please setup MySQL in the local environment. [Tutorial Page](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+- We will download & setup MySQL into your local machine. 
+- [Download Page](https://dev.mysql.com/downloads/mysql/)
 ## MySQL with Django Application
-- This step is not applicable for PyMySQL client package user. It's a alternative way of configuring MySQL into the project
 - Please read [this tutorial](https://medium.com/@lebe_93/using-pymysql-to-connect-to-a-django-project-to-a-mysql-database-77bd5dade213) and configure PyMySQL package within the project 
 ## Create .env file using CMD
 - From project root directory go we will enter the TodoApp directory.
