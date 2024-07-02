@@ -59,6 +59,8 @@ python manage.py runserver
 - [Download Page](https://dev.mysql.com/downloads/mysql/)
 ## MySQL with Django Application
 - Please read [this tutorial](https://medium.com/@lebe_93/using-pymysql-to-connect-to-a-django-project-to-a-mysql-database-77bd5dade213) and configure PyMySQL package within the project 
+- We will avoid putting the database credentials into the settings.py file. Because it will expose your database credential when we will upload code or host our project in public.
+
 ## Create .env file using CMD
 - From project root directory go we will enter the TodoApp directory.
 ```
