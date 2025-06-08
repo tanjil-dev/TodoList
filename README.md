@@ -1,5 +1,5 @@
 # TodoApp
-- It's a daily life Todo list.
+- It's a daily life to-do list.
 - It has both backend(Django) & frontend(HTML, CSS & JavaScript).
 - Single page application(SPA).
 - Login and Registration feature.
@@ -13,7 +13,7 @@
 ```
 git clone https://github.com/tanjil-dev/TodoList.git
 ```
-### Locate into the Project directory
+### Locate the Project directory
 ```
 cd TodoList
 ```
@@ -54,14 +54,14 @@ python manage.py runserver
 ```
 
 ## MySQL Setup
-- We will download & setup MySQL into your local machine. 
+- We will download & set up MySQL on your local machine. 
 - [Download Page](https://dev.mysql.com/downloads/mysql/)
 ## MySQL with Django Application
 - Please read [this tutorial](https://medium.com/@lebe_93/using-pymysql-to-connect-to-a-django-project-to-a-mysql-database-77bd5dade213) and configure PyMySQL package within the project 
-- We will avoid putting the database credentials into the settings.py file. Because it will expose your database credential when we will upload code or host our project in public.
+- We will avoid putting the database credentials into the settings.py file. Because it will expose your database credentials when we upload code or host our project in public.
 
 ## Create .env file using CMD
-- From project root directory go we will enter the TodoApp directory.
+- From the project root directory go we will enter the TodoApp directory.
 ```
 cd TodoApp
 ```
