@@ -8,7 +8,7 @@
 - Live project deployed on PythonAnywhere.
   - URL: https://tanjil95.pythonanywhere.com/
 
-## Project Setup
+## The Project Setup
 ### Clone the repository
 ```
 git clone https://github.com/tanjil-dev/TodoList.git
